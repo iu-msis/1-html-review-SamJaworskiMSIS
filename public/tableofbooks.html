@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="/css/site.css">
 </head>
 <body>
+    <!--https://getbootstrap.com/docs/5.1/content/tables/-->
     <ul class="nav nav-pills">
         <li class="nav-item">
           <a class="nav-link active" href="#">Active</a>
@@ -32,6 +33,7 @@
             <th scope="col">MSRP</th>
           </tr>
         </thead>
+        <h2> A Tables of Books That I Have Read </h2>h2>
         <tbody>
           <tr>
             <th scope="row">1</th>
@@ -87,6 +89,36 @@
             <td>752</td>
             <td>$14</td>
           </tr>
+          <br>
+          <br>
+          <br>
+          <!--https://getbootstrap.com/docs/5.1/forms/input-group/-->
+          <h3>Add a New Book!</h3>
+          <div class="input-group newbook">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group newbook">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Authors(s)" aria-label="Authors(s)" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group newbook">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Year Published" aria-label="Year Published" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group newbook">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Publisher" aria-label="Publisher" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group newbook">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="Page Count" aria-label="Page Count" aria-describedby="basic-addon1">
+          </div>
+          <div class="input-group newbook">
+            <span class="input-group-text" id="basic-addon1">@</span>
+            <input type="text" class="form-control" placeholder="MSRP" aria-label="MSRP" aria-describedby="basic-addon1">
+          </div>
+          <button type="button" class="input-group newbook">Submit Book</button>
         </tbody>
       </table>
 </body>
