@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
   <title>Table of Books</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css" media=”screen” />
   <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
@@ -12,13 +13,13 @@
     <!--https://getbootstrap.com/docs/5.1/content/tables/-->
     <ul class="nav nav-pills">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Active</a>
+          <a class="nav-link" href="index.html">The Corn Page</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="randomuser.html">A Random User</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link active" href="tableofbooks.html">Books Table</a>
         </li>
       </ul>
 
@@ -95,6 +96,7 @@
           <br>
           <!--https://getbootstrap.com/docs/5.1/forms/input-group/-->
           <h3>Add a New Book!</h3>
+          <form>
           <div class="input-group newbook">
             <span class="input-group-text" id="basic-addon1">@</span>
             <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
@@ -121,6 +123,7 @@
           </div>
           <!--https://getbootstrap.com/docs/5.1/components/buttons/-->
           <button type="button" class="input-group newbook">Submit Book</button>
+        </form>
         </tbody>
       </table>
 </body>
