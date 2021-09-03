@@ -1,0 +1,19 @@
+body {
+    background-color: lightyellow;
+  }
+
+p {
+    text: darkred;
+} 
+
+a:link {
+    color: darkblue;
+  }
+
+h2 {
+    color: darkgreen;
+}
+
+#h3purple {
+    background-color: purple;
+  }
