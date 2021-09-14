@@ -23,7 +23,7 @@
         </li>
       </ul>
 
-      <table class="table">
+      <table class="table" id="booksTable">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -126,5 +126,9 @@
         </form>
         </tbody>
       </table>
+      <script src="tablesort.min.js"></script>
+      <script>
+        new Tablesort(document.getElementById('booksTable'));
+      </script>
 </body>
 </html>
