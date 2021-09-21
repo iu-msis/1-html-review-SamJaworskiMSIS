@@ -51,8 +51,11 @@
     <div>
       ​<picture>
         <source srcset={{person.picture.medium}} type="image/svg+xml">
-        <img src={{person.picture.medium}} class="img-fluid RandomUser" alt="Picture of the Random User">
+        <img v-bind:src={{person.picture.medium}} alt="Picture of the Random User">
       </picture>
+    </div>
+    <div>
+      <button type="button" onClick="window.location.reload();">Refresh Page</button>
     </div>
     <script src="js/randomperson.js"></script>
 </body>
