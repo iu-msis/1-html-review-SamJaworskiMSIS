@@ -43,9 +43,15 @@
       <p><a v-bind:href="'mailto:'+person.email">{{person.email}}</a></p>
       <!--https://getbootstrap.com/docs/5.1/content/images/-->
       <!--https://www.wikidata.org/wiki/Q240018 Kazik Staszewski-->
-      ​<picture>
+      <!--​<picture>
         <source srcset="440px-Kazik-N1.jpg" type="image/svg+xml">
         <img src="440px-Kazik-N1.jpg" class="img-fluid Gilgamesh" alt="Picture of Gilgamesh Lagrange">
+      </picture>-->
+    </div>
+    <div>
+      ​<picture>
+        <source srcset={{person.picture.medium}} type="image/svg+xml">
+        <img src={{person.picture.medium}} class="img-fluid RandomUser" alt="Picture of the Random User">
       </picture>
     </div>
     <script src="js/randomperson.js"></script>
