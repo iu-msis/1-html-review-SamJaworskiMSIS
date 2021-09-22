@@ -22,19 +22,18 @@
         </li>
       </ul>
 <h2>A Random User Profile</h2>
-      <div id="personApp">
+      <div v-if="personApp">
       <p>Name:</p>
       <p>{{ person.name.first }} {{ person.name.last }}</p>
-        <br>
-      <p>Country of origin:</p>
-      <p>{{nationality}}</p>
       <br>
-    
+      <p>Country of origin:</p>
+      <p>{{ nationality }}</p>
+      <br>
       <p>Birthday:</p>
-      <p>{{bday}}</p>
+      <p>{{ prettyBirthday }}</p>
       <br>
       <p>Age:</p>
-      <p>{{age}}</p>
+      <p>{{ age }}</p>
       <br>
       <p>Email Address:</p>
       <p><a v-bind:href="'mailto:'+person.email">{{person.email}}</a></p>
@@ -49,10 +48,11 @@
         <source srcset={{picture}} type="image/svg+xml">
         <img v-bind:src={{picture}} alt="Picture of the Random User">
       </picture>
-    </div>
-    <div>
-      <button type="button" onClick="window.location.reload();">Refresh Page</button>
-    </div>-->
+    </div> -->
+
+    <form v-on:submit.prevent="fetchUserData">
+      <button type="submit">Reload</button>
+    </form>
 </div>
 
     <!--  Bootstrap Bundle with Popper -->

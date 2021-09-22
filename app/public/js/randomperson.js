@@ -27,12 +27,13 @@ const Person = {
             this.age = this.person.dob.date
             this.email = this.person.dob.date
             this.picture = this.person.picture.medium
+            console.log("Bottom of json info");
           })
           .catch( err => {
               console.error(err)
           })
 
-          console.log("B");
+          console.log("Bottom of method");
       }
   },
   created() {
