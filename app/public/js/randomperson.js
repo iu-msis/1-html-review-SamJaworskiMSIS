@@ -26,7 +26,7 @@ const Person = {
             this.bday = this.person.dob.date
             this.age = this.person.dob.date
             this.email = this.person.dob.date
-            this.picture = this.person.picture.medium
+            this.picture = this.person.picture.large
             console.log("Bottom of json info");
           })
           .catch( err => {
@@ -36,10 +36,9 @@ const Person = {
           console.log("Bottom of method");
       }
   },
-  created() {
-      this.fetchUserData();
-  }
+    created() {
+        this.fetchUserData();
+    }
 
   }
-  
 Vue.createApp(Person).mount('#personApp');
