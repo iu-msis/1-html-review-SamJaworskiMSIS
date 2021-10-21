@@ -35,91 +35,40 @@
             <th scope="col">MSRP</th>
           </tr>
         </thead>
-        <h2> A Tables of Books That I Have Read </h2>h2>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>The Lord of the Rings</td>
-            <td>JRR Tolkien</td>
-            <td>1954</td>
-            <td>George Allen & Unwin Ltd.</td>
-            <td>1137</td>
-            <td>$25</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>1984</td>
-            <td>George Orwell</td>
-            <td>1949</td>
-            <td>Secker & Warburg</td>
-            <td>304</td>
-            <td>$5</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">The Jungle</td>
-            <td>Upton Sinclair</td>
-            <td>1906</td>
-            <td>See Sharp Press</td>
-            <td>300</td>
-            <td>$10</td>
-          </tr>
-          <tr>
-            <th scope="row">4</th>
-            <td>Heart of Darkness</td>
-            <td>Joseph Conrad</td>
-            <td>1902</td>
-            <td>Blackwoods Magazine</td>
-            <td>78 pages</td>
-            <td>$15</td>
-          </tr>
-          <tr>
-            <th scope="row">5</th>
-            <td>The Killer Angels</td>
-            <td>Michael Shaara</td>
-            <td>1974</td>
-            <td>McKay</td>
-            <td>345</td>
-            <td>$10</td>
-          </tr>
-          <tr>
-            <th scope="row">6</th>
-            <td>The Good Soldier Svejk</td>
-            <td>Jaroslav Hasek</td>
-            <td>1921</td>
-            <td>A. Sauer and V. Cermak</td>
-            <td>752</td>
-            <td>$14</td>
-          </tr>
-          <br>
-          <br>
-          <br>
+        <tr v-for= "book in books">
+          <td>{{ books.title }}</td>
+          <td>{{ books.authors }}</td>
+          <td>{{ books.yearPublished }}</td>
+          <td>{{ books.publisher }}</td>
+          <td>{{ books.pageCount }}</td>
+          <td>{{ prettyMSRP(book.msrp) }}</td>
+        </tr>
           <!--https://getbootstrap.com/docs/5.1/forms/input-group/-->
           <h3>Add a New Book!</h3>
           <form>
           <div class="input-group newbook">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
+            <span class="input-group-text" id="basic-addon1">Title</span>
+            <input type="text" v-model="booksForm.bookTitle" class="form-control" placeholder="Title" aria-label="Title" aria-describedby="basic-addon1">
           </div>
           <div class="input-group newbook">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Authors(s)" aria-label="Authors(s)" aria-describedby="basic-addon1">
+            <span class="input-group-text" id="basic-addon1">Authors</span>
+            <input type="text" v-model="booksForm.bookTitle" class="form-control" placeholder="Authors(s)" aria-label="Authors(s)" aria-describedby="basic-addon1">
           </div>
           <div class="input-group newbook">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Year Published" aria-label="Year Published" aria-describedby="basic-addon1">
+            <span class="input-group-text" id="basic-addon1">Year Published</span>
+            <input type="text" v-model="booksForm.bookTitle" class="form-control" placeholder="Year Published" aria-label="Year Published" aria-describedby="basic-addon1">
           </div>
           <div class="input-group newbook">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Publisher" aria-label="Publisher" aria-describedby="basic-addon1">
+            <span class="input-group-text" id="basic-addon1">Publisher</span>
+            <input type="text" v-model="booksForm.bookTitle" class="form-control" placeholder="Publisher" aria-label="Publisher" aria-describedby="basic-addon1">
           </div>
           <div class="input-group newbook">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="Page Count" aria-label="Page Count" aria-describedby="basic-addon1">
+            <span class="input-group-text" id="basic-addon1">Page Count</span>
+            <input type="text" v-model="booksForm.bookTitle" class="form-control" placeholder="Page Count" aria-label="Page Count" aria-describedby="basic-addon1">
           </div>
           <div class="input-group newbook">
-            <span class="input-group-text" id="basic-addon1">@</span>
-            <input type="text" class="form-control" placeholder="MSRP" aria-label="MSRP" aria-describedby="basic-addon1">
+            <span class="input-group-text" id="basic-addon1">MSRP</span>
+            <input type="text" v-model="booksForm.bookTitle" class="form-control" placeholder="MSRP" aria-label="MSRP" aria-describedby="basic-addon1">
           </div>
           <!--https://getbootstrap.com/docs/5.1/components/buttons/-->
           <button type="button" class="input-group newbook">Submit Book</button>
@@ -127,6 +76,7 @@
         </tbody>
       </table>
       <script src="js/tablesort.min.js"></script>
+      <script src="js/book.js"></script>
       <script>
         new Tablesort(document.getElementById('booksTable'));
       </script>
