@@ -42,6 +42,8 @@
           <td>{{ books.publisher }}</td>
           <td>{{ books.pageCount }}</td>
           <td>{{ prettyMSRP(book.msrp) }}</td>
+          <td><button type="button" v-on:click="postDeleteBook(book)">Delete Book</button></td>
+          <td><button type="button" v-on:click="postEditBook(book)">Edit Book</button></td>
         </tr>
           <!--https://getbootstrap.com/docs/5.1/forms/input-group/-->
           <h3>Add a New Book!</h3>
